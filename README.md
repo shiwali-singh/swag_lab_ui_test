@@ -33,10 +33,12 @@ This project contains automated tests using Selenium and TestNG.
 3. Building the Project
    ```bash
    mvn clean install
+   
  4. Running Tests
-       ```bash
-         mvn test
-5. Test Reports
+       a. Go to testng.xml file in your project structure
+       b. Right click and select run testg.xml file
+       
+6. Test Reports
    TestNG generates reports in the test-report/swagLabs.html directory.
 
 
