@@ -28,3 +28,14 @@ This project contains automated tests using Selenium and TestNG.
    ```bash
    git clone https://github.com/your-username/selenium-testng-project.git
    cd selenium-testng-project
+2. Download WebDriver executable for your browser and place it in the project root.
+
+
+Building the Project
+   mvn clean install
+
+Running Tests
+   mvn test
+   
+Test Reports
+   TestNG generates reports in the test-report/swagLabs.html directory.
