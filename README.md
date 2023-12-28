@@ -31,11 +31,13 @@ This project contains automated tests using Selenium and TestNG.
 2. Download WebDriver executable for your browser and place it in the project root.
 
 
-Building the Project
+3. Building the Project
+   ```bash
    mvn clean install
 
-Running Tests
+4. Running Tests
+  ```bash
    mvn test
    
-Test Reports
+5. Test Reports
    TestNG generates reports in the test-report/swagLabs.html directory.
