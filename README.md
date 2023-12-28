@@ -26,10 +26,9 @@ This project contains automated tests using Selenium and TestNG.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/selenium-testng-project.git
-   cd selenium-testng-project
+   git clone https://github.com/shiwali-singh/swag_lab_ui_test.git
+   cd project-repo
 2. Download WebDriver executable for your browser and place it in the project root.
-
 
 3. Building the Project
    ```bash
