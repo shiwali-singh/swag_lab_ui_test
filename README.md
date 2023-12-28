@@ -34,10 +34,10 @@ This project contains automated tests using Selenium and TestNG.
 3. Building the Project
    ```bash
    mvn clean install
-
-4. Running Tests
-  ```bash
-   mvn test
-   
+ 4. Running Tests
+       ```bash
+         mvn test
 5. Test Reports
    TestNG generates reports in the test-report/swagLabs.html directory.
+
+
