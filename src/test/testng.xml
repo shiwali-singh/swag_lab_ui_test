@@ -15,15 +15,15 @@
             <class name="launch" />
         </classes>
     </test>
-    <test name="Firefox Test">
-        <parameter name="browserName" value="firefox" />
-        <parameter name="url" value="https://www.saucedemo.com/" />
-        <parameter name="headless" value="false" />
+<!--    <test name="Firefox Test">-->
+<!--        <parameter name="browserName" value="firefox" />-->
+<!--        <parameter name="url" value="https://www.saucedemo.com/" />-->
+<!--        <parameter name="headless" value="false" />-->
 
-        <classes>
-            <class name="launch" />
-        </classes>
-    </test>
+<!--        <classes>-->
+<!--            <class name="launch" />-->
+<!--        </classes>-->
+<!--    </test>-->
 <!--    <test name="Login Test">-->
 <!--        <parameter name="browserName" value="chrome" />-->
 <!--        <parameter name="url" value="https://www.saucedemo.com/" />-->

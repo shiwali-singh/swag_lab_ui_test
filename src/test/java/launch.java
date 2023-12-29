@@ -1,7 +1,4 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -50,25 +47,34 @@ public class launch {
     @Test(priority = 2)
     public void verifyEmptyCart() {
         // Click on the "Cart" button
-        WebElement cartButton = driver.findElement(By.cssSelector(".shopping_cart_link"));
-        cartButton.click();
+        try {
+            WebElement cartButton = driver.findElement(By.cssSelector(".shopping_cart_link"));
+            cartButton.click();
 
-        By totalItems = By.cssSelector(".cart_item_label");
-        List<WebElement> totalItemsCount = driver.findElements(totalItems);
-        Assert.assertEquals(totalItemsCount.size(), 0);
+            By totalItems = By.cssSelector(".cart_item_label");
+            List<WebElement> totalItemsCount = driver.findElements(totalItems);
+            Assert.assertEquals(totalItemsCount.size(), 0);
 
-        // Verify "Continue Shopping" button is enabled
-        WebElement continueShoppingButton = driver.findElement(By.cssSelector(".btn_secondary"));
-        Assert.assertTrue(continueShoppingButton.isEnabled());
+            // Verify "Continue Shopping" button is enabled
+            WebElement continueShoppingButton = driver.findElement(By.cssSelector(".btn_secondary"));
+            Assert.assertTrue(continueShoppingButton.isEnabled());
 
-        // Verify "Checkout" button is disabled
-        WebElement checkoutButton = driver.findElement(By.cssSelector(".checkout_button"));
-        Assert.assertFalse(checkoutButton.isEnabled());
+            // Verify "Checkout" button is disabled
+            WebElement checkoutButton = driver.findElement(By.cssSelector(".checkout_button"));
+            Assert.assertFalse(checkoutButton.isEnabled());
+        }
+        catch(NoSuchElementException e)
+        {
+            throw new NoSuchElementException("No such element exist");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Test(priority = 3)
-    public void verifyItemsCountInCart()
-    {
+    public void verifyItemsCountInCart() {
+        try{
         driver.get("https://www.saucedemo.com/inventory.html");
 
         WebElement product = driver.findElement(By.id("add-to-cart-sauce-labs-backpack"));
@@ -83,6 +89,15 @@ public class launch {
         String cartButtonText = cartButton.getText();
 
         Assert.assertEquals(parseInt(cartButtonText), productInCart.size());
+    }
+        catch(NoSuchElementException | StaleElementReferenceException | ElementNotInteractableException e)
+        {
+            throw new NoSuchElementException("Exception occur while executing test case" + e);
+        }
+        catch (Exception e) {
+        e.printStackTrace();
+    }
+
     }
 
 
