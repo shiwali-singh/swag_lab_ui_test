@@ -16,7 +16,7 @@ public class dropdownTest extends hoverTest{
     @Test(priority = 3)
     public void selectFabricDropdown() throws InterruptedException {
 
-        driver.findElement( By.xpath("//input[@value=\"Fabric\"]//ancestor::label")).click();
+        driver.findElement(By.xpath("//input[@value=\"Fabric\"]//ancestor::label")).click();
         WebDriverWait waitFor= new WebDriverWait(driver, Duration.ofSeconds(10));
         waitFor.until(ExpectedConditions.
             elementToBeClickable(
