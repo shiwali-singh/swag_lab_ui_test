@@ -1,36 +1,14 @@
+package swagLabsTest;
+
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
+import utils.launchBrowser;
 import java.util.List;
 
 import static java.lang.Integer.parseInt;
 
-public class launch {
-
-    WebDriver driver = null;
-
-    @BeforeTest
-    @Parameters({"browserName", "url", "headless"})
-    public void setup(String browserName, String url, Boolean headless) {
-
-        try {
-            WebDriver driver = this.initializeBrowser(browserName, headless);
-                driver.get(url);
-                driver.manage().window().maximize();
-
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-            throw new RuntimeException("Failed to set up browser for test execution");
-        }
-    }
+public class loginTests extends launchBrowser {
     @Test(priority = 1)
     public void validLoginTest() {
         try {
@@ -102,7 +80,7 @@ public class launch {
 
 
 
-    public void login(String userName, String password)  throws NoSuchElementException {
+    private void login(String userName, String password)  throws NoSuchElementException {
 
         WebElement usernameField = driver.findElement(By.id("user-name"));
         WebElement passwordField = driver.findElement(By.id("password"));
@@ -113,33 +91,5 @@ public class launch {
         loginButton.click();
     }
 
-    private WebDriver initializeBrowser(String browserName, Boolean headless) {
-        try {
-            if ("chrome".equalsIgnoreCase(browserName)) {
-                ChromeOptions co = new ChromeOptions();
-                if (headless) {
-                    co.addArguments("--headless=new");
-                }
-                driver = new ChromeDriver(co);
-            }
-            else if ("firefox".equalsIgnoreCase(browserName)) {
-                driver = new FirefoxDriver();
-            }
-            else if ("edge".equalsIgnoreCase(browserName)) {
-                driver = new EdgeDriver();
-            }
-            else {
-                System.out.println("Please pass the right browser type");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new RuntimeException("Failed to initialize the WebDriver.", e);
-        }
-        return driver;
-    }
 
-    @AfterTest
-    public void tearDown() {
-        driver.quit();
-    }
 }
