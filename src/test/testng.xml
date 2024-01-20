@@ -2,26 +2,26 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Login Suite">
-    <listeners>
-        <listener class-name="report.extendReport" />
-    </listeners>
+<!--    <listeners>-->
+<!--        <listener class-name="report.extendReport" />-->
+<!--    </listeners>-->
 
-    <test name="Chrome Test">
-        <parameter name="browserName" value="chrome" />
-        <parameter name="url" value="https://www.saucedemo.com/" />
-        <parameter name="headless" value="false" />
+<!--    <test name="Chrome Test">-->
+<!--        <parameter name="browserName" value="chrome" />-->
+<!--        <parameter name="url" value="https://www.saucedemo.com/" />-->
+<!--        <parameter name="headless" value="false" />-->
 
-        <classes>
-            <class name="launch" />
-        </classes>
-    </test>
+<!--        <classes>-->
+<!--            <class name="swagLabsTest.launch" />-->
+<!--        </classes>-->
+<!--    </test>-->
 <!--    <test name="Firefox Test">-->
 <!--        <parameter name="browserName" value="firefox" />-->
 <!--        <parameter name="url" value="https://www.saucedemo.com/" />-->
 <!--        <parameter name="headless" value="false" />-->
 
 <!--        <classes>-->
-<!--            <class name="launch" />-->
+<!--            <class name="swagLabsTest.loginTests" />-->
 <!--        </classes>-->
 <!--    </test>-->
 <!--    <test name="Login Test">-->
@@ -30,7 +30,33 @@
 <!--        <parameter name="headless" value="false" />-->
 
 <!--        <classes>-->
-<!--            <class name="loginTest" />-->
+<!--            <class name="swagLabsTest.loginTest" />-->
 <!--        </classes>-->
 <!--    </test>-->
+
+
+<!-- PHP Travels Tests-->
+
+<!--    <test name="Php travel Test">-->
+<!--        <parameter name="browserName" value="chrome" />-->
+<!--        <parameter name="url" value="https://phptravels.com/demo/" />-->
+<!--        <parameter name="headless" value="false" />-->
+
+<!--        <classes>-->
+<!--            <class name="phpTravelTests.loginTestPhp" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <!-- Myntra Tests-->
+
+    <test name="Myntra web app">
+        <parameter name="browserName" value="chrome" />
+        <parameter name="url" value="https://www.myntra.com/" />
+        <parameter name="headless" value="false" />
+        <classes>
+<!--            <class name="myntraTests.hoverTest" />-->
+            <class name="myntraTests.dropdownTest" />
+        </classes>
+    </test>
+
 </suite>
