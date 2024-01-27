@@ -40,5 +40,6 @@ This project contains automated tests using Selenium and TestNG.
        
 6. Test Reports
    TestNG generates reports in the test-report/swagLabs.html directory.
+![image](https://github.com/shiwali-singh/swag_lab_ui_test/assets/99180572/d5b3b600-4cad-44e5-8aee-b13d2391e417)
 
 
