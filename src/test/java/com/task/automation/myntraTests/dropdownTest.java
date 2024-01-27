@@ -1,4 +1,4 @@
-package myntraTests;
+package com.task.automation.myntraTests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -8,8 +8,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-import java.util.Iterator;
-import java.util.List;
 
 public class dropdownTest extends hoverTest{
 
@@ -25,8 +23,6 @@ public class dropdownTest extends hoverTest{
 
         Thread.sleep(3000);
         WebElement slug = driver.findElement(By.cssSelector(".filter-summary-filterList li:nth-child(2) div"));
-//        waitFor.until(ExpectedConditions.visibilityOf(slug));
         Assert.assertEquals(slug.getText(), "Cotton");
-
     }
 }

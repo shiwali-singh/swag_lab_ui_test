@@ -3,7 +3,7 @@
 
 <suite name="Login Suite">
 <!--    <listeners>-->
-<!--        <listener class-name="report.extendReport" />-->
+<!--        <listener class-name="com.task.automation.util.extendReport" />-->
 <!--    </listeners>-->
 
 <!--    <test name="Chrome Test">-->
@@ -50,12 +50,10 @@
     <!-- Myntra Tests-->
 
     <test name="Myntra web app">
-        <parameter name="browserName" value="chrome" />
-        <parameter name="url" value="https://www.myntra.com/" />
-        <parameter name="headless" value="false" />
+<!--        <parameter name="headless" value="false" />-->
         <classes>
 <!--            <class name="myntraTests.hoverTest" />-->
-            <class name="myntraTests.dropdownTest" />
+            <class name="com.task.automation.myntraTests.dropdownTest" />
         </classes>
     </test>
 
