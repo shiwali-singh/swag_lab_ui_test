@@ -1,14 +1,14 @@
-package swagLabsTest;
+package com.task.automation.swagLabsTest;
 
 import org.openqa.selenium.*;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import utils.launchBrowser;
+import com.task.automation.core.baseTestClass;
 import java.util.List;
 
 import static java.lang.Integer.parseInt;
 
-public class loginTests extends launchBrowser {
+public class loginTests extends baseTestClass {
     @Test(priority = 1)
     public void validLoginTest() {
         try {

@@ -1,4 +1,4 @@
-package phpTravelTests;
+package com.task.automation.phpTravelTests;
 
 public class addBrowserLocationPermission {
 }

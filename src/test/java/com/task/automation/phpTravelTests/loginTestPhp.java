@@ -1,19 +1,17 @@
-package phpTravelTests;
+package com.task.automation.phpTravelTests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import utils.launchBrowser;
+import com.task.automation.core.baseTestClass;
 
 import java.time.Duration;
 import java.util.Set;
 
-public class loginTestPhp  extends launchBrowser {
+public class loginTestPhp  extends baseTestClass {
 
     @Test
     public void loginTest(){
